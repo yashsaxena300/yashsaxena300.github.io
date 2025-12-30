@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Card Template</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922", // Deep dark blue-grey
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "3xl": "2.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for the gallery */
+        .gallery-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+        .gallery-scroll::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+        }
+        .gallery-scroll::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+        .gallery-scroll::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Glassmorphism utilities */
+        .glass-panel {
+            background: rgba(28, 33, 39, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .glass-highlight {
+            background: linear-gradient(135deg, rgba(19, 127, 236, 0.15) 0%, rgba(19, 127, 236, 0.05) 100%);
+            border: 1px solid rgba(19, 127, 236, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased min-h-screen flex items-center justify-center p-4 md:p-8 relative selection:bg-primary/30 selection:text-white">
+<!-- Abstract Background Elements to show off Glassmorphism -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+<div class="absolute top-[-10%] left-[20%] w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] opacity-40 mix-blend-screen"></div>
+<div class="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] opacity-30 mix-blend-screen"></div>
+<div class="absolute top-[40%] left-[-10%] w-[400px] h-[400px] bg-blue-400/10 rounded-full blur-[90px] opacity-30 mix-blend-screen"></div>
+</div>
+<!-- Main Project Card -->
+<main class="w-full max-w-[900px] glass-panel rounded-3xl overflow-hidden transition-all duration-500 hover:shadow-[0_30px_60px_-10px_rgba(0,0,0,0.6)] animate-in fade-in zoom-in duration-500">
+<div class="p-6 md:p-10 flex flex-col gap-6">
+<!-- 1. Header Section -->
+<header class="flex flex-col md:flex-row md:items-start justify-between gap-4 border-b border-white/5 pb-6">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3 flex-wrap">
+<h1 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Senior Frontend Engineer</h1>
+<a class="group flex items-center justify-center w-8 h-8 rounded-full bg-white/5 hover:bg-primary text-white transition-colors duration-300" href="#" title="View Project">
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</a>
+</div>
+<div class="flex items-center gap-2 text-[#9dabb9]">
+<span class="material-symbols-outlined text-[18px] text-primary">domain</span>
+<span class="text-base font-medium">Tesla Autopilot Team</span>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start bg-white/5 px-4 py-2 rounded-xl border border-white/5">
+<span class="material-symbols-outlined text-[18px] text-[#9dabb9]">calendar_month</span>
+<span class="text-sm font-semibold text-white whitespace-nowrap">Jan 2023 - Present</span>
+</div>
+</header>
+<!-- 2. Skill Tags Row -->
+<section class="flex flex-wrap gap-2">
+<div class="flex items-center px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-200 text-xs font-semibold tracking-wide uppercase transition-colors hover:bg-blue-500/20 cursor-default">
+                    React
+                </div>
+<div class="flex items-center px-3 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-200 text-xs font-semibold tracking-wide uppercase transition-colors hover:bg-purple-500/20 cursor-default">
+                    Three.js
+                </div>
+<div class="flex items-center px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-200 text-xs font-semibold tracking-wide uppercase transition-colors hover:bg-emerald-500/20 cursor-default">
+                    WebGL
+                </div>
+<div class="flex items-center px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-200 text-xs font-semibold tracking-wide uppercase transition-colors hover:bg-orange-500/20 cursor-default">
+                    Performance Optimization
+                </div>
+<div class="flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-gray-300 text-xs font-semibold tracking-wide uppercase transition-colors hover:bg-white/10 cursor-default">
+                    Data Visualization
+                </div>
+</section>
+<!-- 3. Hero Image -->
+<section class="relative w-full aspect-video md:aspect-[2.35/1] rounded-2xl overflow-hidden shadow-2xl group border border-white/10">
+<div class="w-full h-full bg-cover bg-center transform transition-transform duration-700 group-hover:scale-105" data-alt="Abstract representation of a high-tech telemetry dashboard with data graphs" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1_sBaBvAACBJgZLgxmJaXTDJo2s1TCY0KUUK4xPW_UgLzrvqOzTRITBFUOEq_f-sZvzbrFjYbB_NZTBLBtkCLmaOkirsEERAi-pPEv0JKkbhp48P7P3fJL8K8p7jVP6L5AQHVVzxVm8g2eKBkBsXfJPayOfb9JwzognTJPe_aRt-1W5498-0013MGxSlF_iNn53MkBbhSsJEFgM0LBUtRaFYNn9z5qEbYYNyiPh4iX5uHvDXTKOAsUorPrwM7xMSnputgEP3t_Yoy');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#1c2127] via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-4 left-4 md:bottom-6 md:left-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-black/60 backdrop-blur-md border border-white/10 text-white text-xs font-medium">
+<span class="material-symbols-outlined text-[14px] text-green-400">image</span>
+                        Main Interface
+                    </span>
+</div>
+</section>
+<!-- 4. Tech Stack Sub-line -->
+<section class="flex flex-col sm:flex-row sm:items-center gap-3 py-2 border-b border-white/5 pb-6">
+<span class="text-[#9dabb9] text-sm font-semibold uppercase tracking-wider min-w-fit">Tech Stack</span>
+<div class="hidden sm:block w-px h-4 bg-white/10"></div>
+<p class="text-white text-sm font-normal font-mono opacity-90 truncate">
+                    TypeScript, Next.js, Redux Toolkit, Python, D3.js
+                </p>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-8">
+<!-- 5. Body Description -->
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-bold text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">description</span>
+                        Project Overview
+                    </h3>
+<p class="text-gray-300 text-base leading-relaxed font-light">
+                        Led the development of the new internal visualization tool for telemetry data processing over 50TB of logs daily. Managed a team of 3 juniors and coordinated with backend teams to define API schemas to ensure seamless data integration. 
+                        <br/><br/>
+                        The primary challenge was rendering millions of data points in real-time without blocking the main thread, which we solved using Web Workers and offscreen canvas rendering.
+                    </p>
+</div>
+<!-- 6. Results/Impact Box -->
+<div class="flex flex-col justify-center glass-highlight rounded-xl p-6 relative overflow-hidden group">
+<!-- Background Icon Decoration -->
+<span class="material-symbols-outlined absolute top-[-10px] right-[-10px] text-[100px] text-primary opacity-5 transform rotate-12 group-hover:rotate-6 transition-transform duration-500 select-none pointer-events-none">
+                        trending_up
+                    </span>
+<h3 class="text-white text-base font-semibold mb-3 flex items-center gap-2 relative z-10">
+<span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                        Key Impact
+                    </h3>
+<div class="relative z-10 flex flex-col gap-1">
+<span class="text-4xl font-bold text-white tracking-tight">40%</span>
+<span class="text-primary text-sm font-medium uppercase tracking-wider">Reduction in render time</span>
+</div>
+<div class="w-full h-px bg-primary/20 my-4 relative z-10"></div>
+<div class="relative z-10">
+<span class="text-2xl font-bold text-white tracking-tight">15%</span>
+<span class="text-[#9dabb9] text-sm font-normal ml-2">Improvement in team velocity</span>
+</div>
+</div>
+</div>
+<!-- 7. Gallery Strip -->
+<section class="flex flex-col gap-3 pt-4">
+<div class="flex items-center justify-between">
+<h3 class="text-sm font-semibold text-[#9dabb9] uppercase tracking-wider">Project Gallery</h3>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-[18px] text-gray-500">drag_handle</span>
+</div>
+</div>
+<!-- Horizontal Scroll Container -->
+<div class="gallery-scroll flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory">
+<!-- Item 1 -->
+<div class="snap-start shrink-0 w-[200px] aspect-[4/3] rounded-xl overflow-hidden border border-white/10 bg-[#1c2127] relative group cursor-pointer hover:ring-2 ring-primary/50 transition-all">
+<div class="w-full h-full bg-cover bg-center opacity-80 group-hover:opacity-100 transition-opacity" data-alt="System architecture diagram displaying data flow" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDT9SXmteXUah85eIVHWwgJyur08iBWs-k_ecKlsruMLsQD5U0Omi-vz7TSwe9R-WLKIl4_m5Ac3vAnldm_KdfMswwgQJibMod7MQc630mT8iFpG5CYn90SSLd3OJhOZfFtJP7q9WRDN1gyvBE-Wc_XpEITwgo8M_Y9iqkx4iCzZm1Kxa2RMXvX2imfgYJLr9tjMspDeUvYWGDaFEzo81c9d09G7ZMFemmwGWSkz3TOpCsH5v0OZPf6buJEquFJqtHDZcLorJBEvfeg');">
+</div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">visibility</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="snap-start shrink-0 w-[200px] aspect-[4/3] rounded-xl overflow-hidden border border-white/10 bg-[#1c2127] relative group cursor-pointer hover:ring-2 ring-primary/50 transition-all">
+<div class="w-full h-full bg-cover bg-center opacity-80 group-hover:opacity-100 transition-opacity" data-alt="Mobile view of the application interface" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDrqWTPY69ZbBeDleNyNWNccWh1c1A2rIRZUQ_dOjAZC8pbQJ94XHgBR60vKzYxZnh_7IXAupSyoLoRH5XO_dwWFxE9U9TUspOGrqC2VVB2_xnjN-scGdv595s1zwTyxaz5f17SyR_3w7sn1aispw-hgyKmmLbHX-WQs_cmTpf_-CceMda9SfEBWuII7zC2Xb01Atxb_0m4Z4G_MCGHC9inoAzFE8_t0MN9ZfgYWrrGN8rknJoR27npGBrbE-AFXUJ1c1Xyvr2UTUA-');">
+</div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">visibility</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="snap-start shrink-0 w-[200px] aspect-[4/3] rounded-xl overflow-hidden border border-white/10 bg-[#1c2127] relative group cursor-pointer hover:ring-2 ring-primary/50 transition-all">
+<div class="w-full h-full bg-cover bg-center opacity-80 group-hover:opacity-100 transition-opacity" data-alt="Graph showing performance improvements over time" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRl_DQLy9jIXwI5BK_AV43OGNzIZ6ZEeb97awJzmk2QqEuj7papWfnQKKWTocnI373EvXSYnoyLt0u1PZyNNFLaGPyvRAyu-oRU5Ozb6Rm-4K7dkB01Aw1axsQarJR2zTJYLFUmGJa_jcsWfu2kX4T930wIe__NNPD2R1aO63RS0AMKNmlrHhb_SNAvAfND2H0Vsoj_pKLGhuR5f30OqCtpwee1F9rFeOy9HKnhdCR7DRgKLuluNUgCumolQMgv5lPQjRgRaMll6na');">
+</div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">visibility</span>
+</div>
+</div>
+<!-- Item 4: Doc Placeholder -->
+<div class="snap-start shrink-0 w-[200px] aspect-[4/3] rounded-xl overflow-hidden border border-white/10 bg-white/5 relative group cursor-pointer hover:bg-white/10 transition-colors flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-3xl text-primary">description</span>
+<span class="text-xs font-medium text-gray-300">Read Case Study</span>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>

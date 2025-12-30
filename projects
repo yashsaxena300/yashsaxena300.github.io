@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Navigation Bar - Engineering Portfolio</title>
+<!-- Material Symbols Link -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar to match dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101922;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #283039;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3e4a56;
+        }
+        
+        /* Glassmorphism utilities */
+        .glass-panel {
+            background: rgba(16, 25, 34, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen font-display flex flex-col items-center">
+<!-- Sticky Navigation Container -->
+<!-- The user requested a sticky navigation bar with glassmorphism. Using top-4 to give it a floating appearance. -->
+<div class="fixed top-0 left-0 right-0 z-50 flex justify-center w-full px-4 pt-4 sm:pt-6">
+<nav class="glass-panel w-full max-w-[1280px] rounded-xl flex items-center justify-between p-3 gap-6 transition-all duration-300">
+<!-- Left Side: Branding & Search -->
+<div class="flex items-center gap-6 flex-1">
+<!-- Brand / Logo Area -->
+<a class="flex items-center gap-3 pl-2 group" href="#">
+<div class="size-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-200">
+<span class="material-symbols-outlined text-xl">terminal</span>
+</div>
+<span class="text-white font-bold text-lg tracking-tight hidden sm:block">John Doe</span>
+</a>
+<!-- Search Bar -->
+<div class="hidden md:flex items-center flex-1 max-w-sm">
+<div class="relative w-full group/search">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400 group-focus-within/search:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="block w-full rounded-full border-none bg-white/5 py-2 pl-10 pr-3 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:bg-white/10 transition-all duration-200" placeholder="Search projects, skills..." type="text"/>
+<div class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+<kbd class="hidden lg:inline-flex items-center rounded border border-white/10 px-1.5 font-sans text-xs font-medium text-slate-500">⌘K</kbd>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Navigation Links -->
+<div class="flex items-center justify-end gap-1">
+<div class="hidden lg:flex items-center gap-1">
+<a class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">Industry Experience</a>
+<a class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">Technical Extracurriculars</a>
+<a class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">Class Projects</a>
+<a class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">Quant Finance</a>
+<a class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">Leadership</a>
+</div>
+<!-- Divider -->
+<div class="h-6 w-px bg-white/10 mx-2 hidden lg:block"></div>
+<!-- Profile / Menu Actions -->
+<div class="flex items-center gap-3 pr-2">
+<button class="relative size-9 rounded-full overflow-hidden border border-white/10 ring-2 ring-transparent hover:ring-primary/50 transition-all">
+<div class="w-full h-full bg-cover bg-center" data-alt="Portrait of the engineer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXnVnMBvhNN7qiFG1zqhcWTTNLusyLCjz47YNyfhxl-nmgdGKzcN3WMK-MysQf2yx7MbBajEvzdSPPPF1hmQvglqyZia_bJi3mzYNv4RQrT2i8br8MSPe1axlO2rQ-0B3dxBqDXXTndbYHKZ6fUZEl8aZBEZZ92ec1QmDmbwzHiAX-myPocj8BZiLghq8eIl5E7ZnZSISYQg42zRWZD9HpYdVGhYmNOgund5emcftX4MLie6F5eypAM5LCx8LSobcPQv8OlajptPGT');"></div>
+</button>
+<!-- Mobile Menu Button (Visible on small screens) -->
+<button class="lg:hidden flex items-center justify-center size-9 rounded-lg hover:bg-white/10 text-white transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+</div>
+<!-- Dummy Content for Scrolling Demonstration -->
+<main class="w-full max-w-[960px] px-6 pt-32 pb-20 flex flex-col gap-12">
+<!-- Hero Section Placeholder -->
+<section class="flex flex-col gap-6 items-start">
+<h1 class="text-5xl font-bold text-white tracking-tight">Engineering Portfolio</h1>
+<p class="text-xl text-slate-400 max-w-2xl">
+                Building scalable systems and solving complex problems. Specializing in quantitative finance algorithms and high-frequency trading systems.
+            </p>
+<div class="flex gap-4 mt-2">
+<button class="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-[0_0_15px_rgba(19,127,236,0.3)]">View Resume</button>
+<button class="bg-white/5 hover:bg-white/10 text-white px-6 py-3 rounded-lg font-medium transition-colors border border-white/10">Contact Me</button>
+</div>
+</section>
+<!-- Bento Grid / Cards Placeholder -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-[#18212b] rounded-xl p-6 border border-white/5 hover:border-primary/30 transition-colors group">
+<div class="size-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">candlestick_chart</span>
+</div>
+<h3 class="text-white text-lg font-bold mb-2">High-Frequency Trading Bot</h3>
+<p class="text-slate-400 text-sm">Developed a low-latency trading engine in C++ achieving sub-millisecond execution times on crypto exchanges.</p>
+<div class="mt-4 flex gap-2">
+<span class="text-xs font-medium text-slate-500 bg-black/30 px-2 py-1 rounded">C++</span>
+<span class="text-xs font-medium text-slate-500 bg-black/30 px-2 py-1 rounded">Python</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-[#18212b] rounded-xl p-6 border border-white/5 hover:border-primary/30 transition-colors group">
+<div class="size-12 rounded-lg bg-green-500/10 flex items-center justify-center text-green-400 mb-4 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">memory</span>
+</div>
+<h3 class="text-white text-lg font-bold mb-2">FPGA Accelerator</h3>
+<p class="text-slate-400 text-sm">Designed a custom hardware accelerator for neural network inference using Verilog on Xilinx boards.</p>
+<div class="mt-4 flex gap-2">
+<span class="text-xs font-medium text-slate-500 bg-black/30 px-2 py-1 rounded">Verilog</span>
+<span class="text-xs font-medium text-slate-500 bg-black/30 px-2 py-1 rounded">SystemVerilog</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-[#18212b] rounded-xl p-6 border border-white/5 hover:border-primary/30 transition-colors group">
+<div class="size-12 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 mb-4 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">deployed_code</span>
+</div>
+<h3 class="text-white text-lg font-bold mb-2">Distributed System Monitor</h3>
+<p class="text-slate-400 text-sm">A real-time monitoring dashboard for microservices architecture built with Go and React.</p>
+<div class="mt-4 flex gap-2">
+<span class="text-xs font-medium text-slate-500 bg-black/30 px-2 py-1 rounded">Go</span>
+<span class="text-xs font-medium text-slate-500 bg-black/30 px-2 py-1 rounded">React</span>
+</div>
+</div>
+<!-- Large Image Card Placeholder -->
+<div class="col-span-1 md:col-span-2 lg:col-span-2 bg-[#18212b] rounded-xl overflow-hidden border border-white/5 relative h-64 group">
+<div class="absolute inset-0 bg-gradient-to-t from-[#18212b] to-transparent z-10"></div>
+<div class="absolute bottom-6 left-6 z-20">
+<h3 class="text-white text-xl font-bold mb-1">Autonomous Drone Navigation</h3>
+<p class="text-slate-300 text-sm max-w-md">Computer vision pipeline for obstacle avoidance in cluttered environments using SLAM.</p>
+</div>
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Drone flying in a complex indoor environment with wireframe overlay" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDO0CxAUZ8GFZKFYFthUT3ziACqjtQROkzc215ICkQHL3q_2yzya3_wleN-PTSrCNRldyqS2RufXJVMQaZqLJDYoLLIaP3MZTJnaZvPxyIblqubFME0NcOz5FuLbxNZA4YwckYL0RalftS8YsSyh22yu65e0gbt1jspp5YX9ThJfVoDtCe7lpPwB4xN7l6zn6t2JDvk23CplERl_TD7Krg-qjR9ZeH9CsV0wvA1niHshK3gDESYEOn8cRLzKdLqdq1fSJixD3e6_faw');"></div>
+</div>
+<!-- Card 4 -->
+<div class="bg-[#18212b] rounded-xl p-6 border border-white/5 hover:border-primary/30 transition-colors group">
+<div class="size-12 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-400 mb-4 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<h3 class="text-white text-lg font-bold mb-2">Engineering Leadership</h3>
+<p class="text-slate-400 text-sm">President of the University Robotics Club. Led a team of 30 students to national finals.</p>
+</div>
+</section>
+<!-- Dummy Text Block -->
+<section class="bg-white/5 rounded-2xl p-8 border border-white/5">
+<h2 class="text-2xl font-bold text-white mb-4">About The Portfolio</h2>
+<p class="text-slate-400 leading-relaxed">
+                This portfolio showcases a journey through complex engineering challenges. From optimizing low-level code to architecting distributed systems, every project reflects a commitment to efficiency, scalability, and robust design. The navigation bar above allows quick access to specific domains of expertise, ensuring that recruiters and technical peers can easily find relevant work samples.
+            </p>
+</section>
+</main>
+</body></html>

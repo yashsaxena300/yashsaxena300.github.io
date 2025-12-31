@@ -1,14 +1,9 @@
----
-layout: null
-title: Engineering Portfolio Nav
----
-
 <!DOCTYPE html>
 
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>{{ page.title }}</title>
+<title>Navigation - Engineering Portfolio</title>
 <!-- Material Symbols Link -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <!-- Google Fonts: Inter -->
@@ -64,7 +59,48 @@ title: Engineering Portfolio Nav
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark min-h-screen font-display flex flex-col items-center">
-{% include base/project_header.html %}
+<!-- Sticky Navigation Container -->
+<!-- The user requested a sticky navigation bar with glassmorphism. Using top-4 to give it a floating appearance. -->
+<div class="fixed top-0 left-0 right-0 z-50 flex justify-center w-full px-4 pt-4 sm:pt-6">
+<nav class="glass-panel w-full max-w-[1280px] rounded-xl flex items-center justify-between p-3 gap-6 transition-all duration-300">
+<!-- Left Side: Branding & Search -->
+<div class="flex items-center gap-6 flex-1">
+<!-- Brand / Logo Area -->
+<a class="flex items-center gap-3 pl-2 group" href="index.html">
+<div class="size-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-200">
+<span class="material-symbols-outlined text-xl">terminal</span>
+</div>
+<span class="text-white font-bold text-lg tracking-tight hidden sm:block">Yash Saxena</span>
+</a>
+<!-- Search Bar -->
+<div class="hidden md:flex items-center flex-1 max-w-sm">
+<div class="relative w-full group/search">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400 group-focus-within/search:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="block w-full rounded-full border-none bg-white/5 py-2 pl-10 pr-3 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:bg-white/10 transition-all duration-200" placeholder="Search projects, skills..." type="text"/>
+<div class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+<kbd class="hidden lg:inline-flex items-center rounded border border-white/10 px-1.5 font-sans text-xs font-medium text-slate-500"></kbd>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Navigation Links -->
+<div class="flex items-center justify-end gap-1">
+<div class="hidden lg:flex items-center gap-1">
+<a class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="project_lists/industry.html">Industry Experience</a>
+<a class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="project_lists/technicalecs.html">Technical Extracurriculars</a>
+<a class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="project_lists/miscellaneous.html">Class Projects</a>
+<a class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="project_lists/leadership.html">Leadership</a>
+</div>
+<!-- Mobile Menu Button (Visible on small screens) -->
+<button class="lg:hidden flex items-center justify-center size-9 rounded-lg hover:bg-white/10 text-white transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+</div>
 <!-- Dummy Content for Scrolling Demonstration -->
 <main class="w-full max-w-[960px] px-6 pt-32 pb-20 flex flex-col gap-12">
 <!-- Hero Section Placeholder -->
@@ -136,5 +172,11 @@ title: Engineering Portfolio Nav
 </div>
 </section>
 </main>
-{% include base/footer.html %}
+<footer class="border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6">
+<p class="text-slate-500 dark:text-slate-400 text-sm">© 2026 Saxena Holdings. All rights reserved.</p>
+</div>
+</div>
+</footer>
 </body></html>

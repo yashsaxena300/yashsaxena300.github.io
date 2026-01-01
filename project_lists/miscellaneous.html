@@ -1,1 +1,56 @@
+---
+layout: null
+title: Miscellaneous Technical Projects
+---
+
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>{{ page.title }}</title>
+<!-- Material Symbols Link -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4f46e5", // Soft Indigo (Adjusted for better contrast/relaxing feel)
+                        "primary-soft": "#818cf8",
+                        "accent-orange": "#f97316",
+                        "background-light": "#f8fafc", // Slate 50
+                        "background-dark": "#0f172a", // Slate 900
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<link rel="stylesheet" href="{{ /assets/css/project_list_style.css' | relative_url }}">
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen font-display flex flex-col items-center">
+{% include base/project_list_header.html %}
+<main class="w-full max-w-[960px] px-6 pt-32 pb-20 flex flex-col gap-12">
+<!-- Hero Section Placeholder -->
+<section class="flex flex-col gap-6 items-start">
+<h1 class="text-5xl font-bold text-white tracking-tight">{{ page.title }}</h1>
+<p class="text-xl text-slate-400 max-w-2xl">
+                I like to build cool things, regardless of the technical discipline required. Although I'm majoring in mechanical engineering, my skillset goes far beyond physical engineering.
+</p>
+<!-- Replace with projec cards like this {% include projects/michelin_S25/michelin_S25_main.html %} -->
+</main>
+{% include base/footer.html %}
+</body></html>
+
 

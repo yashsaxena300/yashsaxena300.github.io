@@ -1,6 +1,6 @@
 To Do List:
 
-ASME EV GP Project Card
+ASME EV GP Project Card\n
 FSAE Project Card
 ASME Director of Finance Card
 ASME Aero Design Lead Card
